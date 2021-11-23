@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AdminPro">
         <activity
+            android:name=".DatosGenerales"
+            android:exported="true" />
+        <activity
+            android:name=".DatosIniciales"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
