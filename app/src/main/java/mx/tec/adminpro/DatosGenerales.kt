@@ -21,6 +21,9 @@ class DatosGenerales : AppCompatActivity() {
         txtInv = findViewById(R.id.textInvInicial)
         txtTrema = findViewById(R.id.textTrema)
         txtValorR = findViewById(R.id.textValorRescate)
+        txtInv.hint = "Inversion inicial (" + MyGlobal.Moneda +")"
+        txtTrema.hint = "Trema (" + MyGlobal.Moneda +")"
+        txtValorR.hint = "Valor de rescate (" + MyGlobal.Moneda +")"
     }
 
     fun back(view : View?){

@@ -8,11 +8,11 @@
 
     <EditText
         android:id="@+id/textVentas"
-        android:layout_width="243dp"
-        android:layout_height="48dp"
+        android:layout_width="354dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="266dp"
         android:layout_marginStart="37dp"
         android:layout_marginTop="173dp"
-        android:layout_marginBottom="266dp"
         android:ems="10"
         android:hint="Ventas Mensuales Esperadas"
         android:inputType="textPersonName"
@@ -22,8 +22,8 @@
 
     <EditText
         android:id="@+id/textCostos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="354dp"
+        android:layout_height="54dp"
         android:layout_marginBottom="23dp"
         android:ems="10"
         android:hint="Costos Mensuales"
@@ -35,8 +35,8 @@
 
     <EditText
         android:id="@+id/textDepre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="351dp"
+        android:layout_height="46dp"
         android:layout_marginBottom="388dp"
         android:ems="10"
         android:hint="Depreciación de Activos"

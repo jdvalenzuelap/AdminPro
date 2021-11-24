@@ -23,6 +23,9 @@ class MesConMes : AppCompatActivity() {
         txtVentas = findViewById(R.id.textVentas)
         txtCostos = findViewById(R.id.textCostos)
         txtDepreciacion = findViewById(R.id.textDepre)
+        txtVentas.hint = "Ventas Mensuales esperadas (" + MyGlobal.Moneda + ")"
+        txtCostos.hint = "Costos Mensuales (" + MyGlobal.Moneda + ")"
+        txtDepreciacion.hint = "Depreciación de activos (" + MyGlobal.Moneda + ")"
     }
 
     fun back(view : View?){
