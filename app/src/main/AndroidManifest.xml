@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AdminPro">
         <activity
+            android:name=".ConsejoNegativo"
+            android:exported="true" />
+        <activity
+            android:name=".ConsejoPositivo"
+            android:exported="true" />
+        <activity
             android:name=".Resultados"
             android:exported="true" />
         <activity

@@ -1,5 +1,6 @@
 package mx.tec.adminpro
 
+import android.content.Intent
 import android.icu.number.CurrencyPrecision
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -14,6 +15,7 @@ class Resultados : AppCompatActivity() {
     lateinit var txtISR: TextView
     lateinit var txtVPN: TextView
     lateinit var txtTIR: TextView
+    lateinit var txtWacc: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,6 +24,7 @@ class Resultados : AppCompatActivity() {
         txtISR = findViewById(R.id.setISR)
         txtVPN = findViewById(R.id.setVPN)
         txtTIR = findViewById(R.id.setTir)
+        txtWacc = findViewById(R.id.SetWacc)
 
         val baseGravable = MyGlobal.Ventas.toDouble() - MyGlobal.Costos.toDouble() - MyGlobal.Depreciacion.toDouble()
         var ISR = 0.0
@@ -34,14 +37,20 @@ class Resultados : AppCompatActivity() {
         val tasaMensual = (1+(MyGlobal.Trema.toDouble()/100)).pow((1/12)-1)/100
 
         val valorPresenteNeto = vpn(flujoMensual, MyGlobal.InversionInicial.toDouble(), MyGlobal.Plazo.toInt(),tasaMensual)
-        val tir = 15
-//        val tir = irr(MyGlobal.InversionInicial.toDouble(), flujoMensual, 3)
+//        val tir = 15
+        val tir = irr(MyGlobal.InversionInicial.toDouble(), flujoMensual, 3)
 
         txtISR.text = ISR.toString()
         txtTIR.text = tir.toString()
         txtVPN.text = valorPresenteNeto.toString()
 
         val wacc = MyGlobal.RetLibre.toDouble() + (MyGlobal.BMerc.toDouble()*(MyGlobal.RetMerc.toDouble()-MyGlobal.RetLibre.toDouble()))
+//        Toast.makeText(this, "$wacc", Toast.LENGTH_SHORT).show()
+        if (wacc - 1 > MyGlobal.Trema.toDouble() || wacc + 1 < MyGlobal.Trema.toDouble()){
+            txtWacc.text = "La TREMA es bastante diferente del WACC estimado, porfavor considera ajustar tu TREMA a algo más realista."
+        }else{
+            txtWacc.text = "La TREMA es muy cercana al WACC, los calculos deberían de ser una buena referencia."
+        }
     }
 
     fun vpn(flujo:Double, inversion:Double, periodos:Int, tasa:Double) : Double{
@@ -66,10 +75,12 @@ class Resultados : AppCompatActivity() {
             npv_calc = vpn(flujo, inversion, MyGlobal.Plazo.toInt(), rate)
 //            Log.wtf("fin","$npv_calc")
             if (npv_calc > precision){
-                rate += 0.01
+
+                rate += 0.0001
             }else if (npv_calc < -precision){
-                rate -= 0.01
+                rate -= 0.0001
             }
+            Log.wtf("fin", "$rate")
         }
         Log.wtf("fin", "terminamos tir")
         if (rate >= 0){
@@ -82,5 +93,10 @@ class Resultados : AppCompatActivity() {
 
     fun regresar(view: View?){
         finish()
+    }
+
+    fun consejoExperto(view: View?){
+        val intent = Intent(this, ConsejoPositivo::class.java)
+        startActivity(intent)
     }
 }
