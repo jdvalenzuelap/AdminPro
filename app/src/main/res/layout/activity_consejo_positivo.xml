@@ -6,4 +6,41 @@
     android:layout_height="match_parent"
     tools:context=".ConsejoPositivo">
 
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginBottom="248dp"
+        android:text="Un muy buen proyecto..."
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/textView23"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="37dp"
+        android:text="Este proyecto es un proyecto que recomendamos altamente. De acuerdo con nuestro análisis financiero, pudimos ver que cuentas con una TIR mayor a tu TREMA.\nEsa TIR quiere decir que el proyecto, de acuerdo a los datos proporcionados, es rentable. No solo es rentable pero cumple con las expectativas puestas por ustedes.\n\n\nRecomendamos hacer un estudio de mercado acerca del proyecto para poder tener en mente la dificultad de la ejecución del mismo."
+        app:layout_constraintBottom_toTopOf="@+id/button8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="66dp"
+        android:onClick="regresar"
+        android:text="regresar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView23" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,4 +6,45 @@
     android:layout_height="match_parent"
     tools:context=".ConsejoNegativo">
 
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="58dp"
+        android:onClick="regresar"
+        android:text="regresar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="37dp"
+        android:onClick="regresar"
+        android:text="Hicimos lo mejor para poder ver el lado positivo del proyecto pero lo consideramos con un proyecto riesgoso. De acuerdo con los datos financieros que fueron ingresados, pudimos determinar que este proyecto no cumple satisfactoriamente con las metas definidas por ustedes, en especifico, podemos ver que la TIR es menor a la TREMA. Esto nos dice que el proyecto es menos rentable de lo que se necesita y se tiene que tener mucho cuidado si se quiere ejecutar.\n\n\nRecomendamos tener mucha precaución y revisar de manera detenida las finanzas del proyecto, es posible que sea uno no rentable."
+        app:layout_constraintBottom_toTopOf="@+id/button9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="198dp"
+        android:onClick="regresar"
+        android:text="Hay que tener cuidado..."
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/textView25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
