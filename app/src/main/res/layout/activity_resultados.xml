@@ -10,68 +10,107 @@
         android:id="@+id/setISR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="66dp"
+        android:layout_marginEnd="1dp"
         android:layout_marginBottom="39dp"
         android:text="TextView"
         app:layout_constraintBottom_toTopOf="@+id/setVPN"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/setVPN" />
 
     <TextView
         android:id="@+id/setTir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginBottom="56dp"
+        android:layout_marginEnd="87dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/SetWacc"
-        app:layout_constraintStart_toStartOf="@+id/setVPN"
-        app:layout_constraintTop_toBottomOf="@+id/setVPN" />
+        app:layout_constraintBottom_toBottomOf="@+id/textView28"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView28" />
 
     <TextView
         android:id="@+id/SetWacc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:layout_marginBottom="215dp"
+        android:layout_width="259dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="179dp"
+        android:layout_marginBottom="179dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/button6"
-        app:layout_constraintEnd_toEndOf="@+id/setTir"
-        app:layout_constraintTop_toBottomOf="@+id/setTir" />
+        app:layout_constraintBottom_toBottomOf="@+id/button7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setISR" />
 
     <TextView
         android:id="@+id/setVPN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginBottom="46dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="47dp"
         android:text="TextView"
         app:layout_constraintBottom_toTopOf="@+id/setTir"
-        app:layout_constraintStart_toStartOf="@+id/setISR"
-        app:layout_constraintTop_toBottomOf="@+id/setISR" />
+        app:layout_constraintEnd_toEndOf="@+id/setTir" />
 
     <Button
         android:id="@+id/button6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_width="120dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginBottom="66dp"
         android:onClick="regresar"
         android:text="Regresar"
-        app:layout_constraintBottom_toTopOf="@+id/button7"
-        app:layout_constraintStart_toStartOf="@+id/button7"
+        app:layout_constraintBottom_toBottomOf="@+id/button7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SetWacc" />
 
     <Button
         android:id="@+id/button7"
         android:layout_width="119dp"
         android:layout_height="56dp"
-        android:layout_marginBottom="129dp"
+        android:layout_marginBottom="124dp"
         android:onClick="consejoExperto"
         android:text="consejo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="37dp"
+        android:text="Asi se ve el proyecto..."
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="138dp"
+        android:text="Impuestos a pagar:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="47dp"
+        android:text="TIR del proyecto:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView30" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="40dp"
+        android:text="Valor presente neto:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView27" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

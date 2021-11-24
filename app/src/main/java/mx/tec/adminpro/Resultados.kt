@@ -10,6 +10,7 @@ import android.widget.TextView
 import android.widget.Toast
 import java.util.logging.Logger
 import kotlin.math.pow
+import kotlin.math.round
 
 class Resultados : AppCompatActivity() {
     lateinit var txtISR: TextView
@@ -37,13 +38,15 @@ class Resultados : AppCompatActivity() {
         val flujoMensual = resultado+MyGlobal.Depreciacion.toInt()
         val tasaMensual = (1+(MyGlobal.Trema.toDouble()/100)).pow((1/12)-1)/100
 
-        val valorPresenteNeto = vpn(flujoMensual, MyGlobal.InversionInicial.toDouble(), MyGlobal.Plazo.toInt(),tasaMensual)
+        var valorPresenteNeto = vpn(flujoMensual, MyGlobal.InversionInicial.toDouble(), MyGlobal.Plazo.toInt(),tasaMensual)
 //        val tir = 15
-        tir = irr(MyGlobal.InversionInicial.toDouble(), flujoMensual, 3)
+        tir = irr(MyGlobal.InversionInicial.toDouble(), flujoMensual, 3) * 100
+        tir = round(tir)
+        valorPresenteNeto = round(valorPresenteNeto)
 
-        txtISR.text = ISR.toString()
-        txtTIR.text = tir.toString()
-        txtVPN.text = valorPresenteNeto.toString()
+        txtISR.text = ISR.toString() + " ${MyGlobal.Moneda}"
+        txtTIR.text = "% ${tir.toString()}"
+        txtVPN.text = valorPresenteNeto.toString() + " ${MyGlobal.Moneda}"
 
         val wacc = MyGlobal.RetLibre.toDouble() + (MyGlobal.BMerc.toDouble()*(MyGlobal.RetMerc.toDouble()-MyGlobal.RetLibre.toDouble()))
 //        Toast.makeText(this, "$wacc", Toast.LENGTH_SHORT).show()

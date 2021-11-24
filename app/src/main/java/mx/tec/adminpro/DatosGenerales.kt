@@ -22,7 +22,7 @@ class DatosGenerales : AppCompatActivity() {
         txtTrema = findViewById(R.id.textTrema)
         txtValorR = findViewById(R.id.textValorRescate)
         txtInv.hint = "Inversion inicial (" + MyGlobal.Moneda +")"
-        txtTrema.hint = "Trema (" + MyGlobal.Moneda +")"
+        txtTrema.hint = "% Trema"
         txtValorR.hint = "Valor de rescate (" + MyGlobal.Moneda +")"
     }
 
