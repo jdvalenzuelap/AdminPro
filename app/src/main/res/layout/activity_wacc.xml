@@ -4,75 +4,76 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DatosGenerales">
+    tools:context=".Wacc">
 
     <EditText
-        android:id="@+id/textInvInicial"
+        android:id="@+id/textRetLibre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="37dp"
         android:layout_marginTop="171dp"
         android:ems="10"
-        android:hint="Inversión Inicial"
+        android:hint="% retorno libre de riesgo"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/textTrema"
+        android:id="@+id/textRetMercado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="14dp"
         android:ems="10"
-        android:hint="Trema"
+        android:hint="% retorno mercado"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        app:layout_constraintStart_toStartOf="@+id/textInvInicial"
-        app:layout_constraintTop_toBottomOf="@+id/textInvInicial" />
+        app:layout_constraintStart_toStartOf="@+id/textRetLibre"
+        app:layout_constraintTop_toBottomOf="@+id/textRetLibre" />
 
     <EditText
-        android:id="@+id/textValorRescate"
+        android:id="@+id/textBMercado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="23dp"
         android:ems="10"
-        android:hint="Valor de rescate"
+        android:hint="Beta del mercado"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        app:layout_constraintStart_toStartOf="@+id/textTrema"
-        app:layout_constraintTop_toBottomOf="@+id/textTrema" />
+        app:layout_constraintStart_toStartOf="@+id/textRetMercado"
+        app:layout_constraintTop_toBottomOf="@+id/textRetMercado" />
 
     <Button
-        android:id="@+id/btn_Regresar"
+        android:id="@+id/btn_Regresar3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="139dp"
+        android:layout_marginBottom="16dp"
         android:onClick="back"
         android:text="Regresar"
-        app:layout_constraintStart_toStartOf="@+id/btn_Continuar"
-        app:layout_constraintTop_toBottomOf="@+id/textValorRescate" />
+        app:layout_constraintBottom_toTopOf="@+id/btn_Continuar3"
+        app:layout_constraintStart_toStartOf="@+id/btn_Continuar3" />
 
     <Button
-        android:id="@+id/btn_Continuar"
+        android:id="@+id/btn_Continuar3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginBottom="137dp"
         android:onClick="next"
         android:text="Continuar"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_Regresar" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="47dp"
-        android:text="Datos Generales"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="35dp"
+        android:text="Wacc"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

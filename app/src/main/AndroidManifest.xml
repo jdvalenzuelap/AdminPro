@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AdminPro">
         <activity
+            android:name=".Resultados"
+            android:exported="true" />
+        <activity
+            android:name=".Recap"
+            android:exported="true" />
+        <activity
+            android:name=".Wacc"
+            android:exported="true" />
+        <activity
+            android:name=".MesConMes"
+            android:exported="true" />
+        <activity
             android:name=".DatosGenerales"
             android:exported="true" />
         <activity

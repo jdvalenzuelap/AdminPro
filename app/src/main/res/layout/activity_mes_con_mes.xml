@@ -4,75 +4,82 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DatosGenerales">
+    tools:context=".MesConMes">
 
     <EditText
-        android:id="@+id/textInvInicial"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/textVentas"
+        android:layout_width="243dp"
+        android:layout_height="48dp"
         android:layout_marginStart="37dp"
-        android:layout_marginTop="171dp"
+        android:layout_marginTop="173dp"
+        android:layout_marginBottom="266dp"
         android:ems="10"
-        android:hint="Inversión Inicial"
+        android:hint="Ventas Mensuales Esperadas"
         android:inputType="textPersonName"
-        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_Regresar2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/textTrema"
+        android:id="@+id/textCostos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginBottom="23dp"
         android:ems="10"
-        android:hint="Trema"
+        android:hint="Costos Mensuales"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        app:layout_constraintStart_toStartOf="@+id/textInvInicial"
-        app:layout_constraintTop_toBottomOf="@+id/textInvInicial" />
+        app:layout_constraintBottom_toTopOf="@+id/textDepre"
+        app:layout_constraintStart_toStartOf="@+id/textVentas"
+        app:layout_constraintTop_toBottomOf="@+id/textVentas" />
 
     <EditText
-        android:id="@+id/textValorRescate"
+        android:id="@+id/textDepre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
+        android:layout_marginBottom="388dp"
         android:ems="10"
-        android:hint="Valor de rescate"
+        android:hint="Depreciación de Activos"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        app:layout_constraintStart_toStartOf="@+id/textTrema"
-        app:layout_constraintTop_toBottomOf="@+id/textTrema" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textCostos"
+        app:layout_constraintTop_toBottomOf="@+id/textCostos" />
 
     <Button
-        android:id="@+id/btn_Regresar"
+        android:id="@+id/btn_Regresar2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="139dp"
+        android:layout_marginBottom="16dp"
         android:onClick="back"
         android:text="Regresar"
-        app:layout_constraintStart_toStartOf="@+id/btn_Continuar"
-        app:layout_constraintTop_toBottomOf="@+id/textValorRescate" />
+        app:layout_constraintBottom_toTopOf="@+id/btn_Continuar2"
+        app:layout_constraintStart_toStartOf="@+id/btn_Continuar2"
+        app:layout_constraintTop_toBottomOf="@+id/textVentas" />
 
     <Button
-        android:id="@+id/btn_Continuar"
+        android:id="@+id/btn_Continuar2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginBottom="137dp"
         android:onClick="next"
         android:text="Continuar"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_Regresar" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_Regresar2" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="47dp"
-        android:text="Datos Generales"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginBottom="128dp"
+        android:text="Mes Con Mes"
+        app:layout_constraintBottom_toTopOf="@+id/textVentas"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
