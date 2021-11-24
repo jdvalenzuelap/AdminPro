@@ -16,7 +16,7 @@ class Resultados : AppCompatActivity() {
     lateinit var txtVPN: TextView
     lateinit var txtTIR: TextView
     lateinit var txtWacc: TextView
-    val tir : Double = 0.0
+    var tir : Double = 0.0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
