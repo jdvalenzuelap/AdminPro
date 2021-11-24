@@ -16,6 +16,7 @@ class Resultados : AppCompatActivity() {
     lateinit var txtVPN: TextView
     lateinit var txtTIR: TextView
     lateinit var txtWacc: TextView
+    val tir : Double = 0.0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,7 +39,7 @@ class Resultados : AppCompatActivity() {
 
         val valorPresenteNeto = vpn(flujoMensual, MyGlobal.InversionInicial.toDouble(), MyGlobal.Plazo.toInt(),tasaMensual)
 //        val tir = 15
-        val tir = irr(MyGlobal.InversionInicial.toDouble(), flujoMensual, 3)
+        tir = irr(MyGlobal.InversionInicial.toDouble(), flujoMensual, 3)
 
         txtISR.text = ISR.toString()
         txtTIR.text = tir.toString()
@@ -96,7 +97,13 @@ class Resultados : AppCompatActivity() {
     }
 
     fun consejoExperto(view: View?){
-        val intent = Intent(this, ConsejoPositivo::class.java)
-        startActivity(intent)
+
+        if(tir < MyGlobal.Trema.toDouble()){
+            val intent = Intent(this, ConsejoNegativo::class.java)
+            startActivity(intent)
+        }else{
+            val intent = Intent(this, ConsejoPositivo::class.java)
+            startActivity(intent)
+        }
     }
 }
