@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
+import android.widget.Toast
 
 class DatosIniciales : AppCompatActivity() {
     lateinit var txtNombre: EditText
@@ -26,12 +27,15 @@ class DatosIniciales : AppCompatActivity() {
 
     fun continuar(view: View?){
         if (txtNombre.text.toString() != "" && txtMoneda.text.toString() != "" && txtPlazo.text.toString() != ""){
+
             MyGlobal.Nombre = txtNombre.text.toString()
             MyGlobal.Moneda = txtMoneda.text.toString()
             MyGlobal.Plazo = txtPlazo.text.toString()
 
             val intent = Intent(this, DatosGenerales::class.java)
             startActivity(intent)
+        }else{
+            Toast.makeText(this, "Se deben llenar todos los campos.", Toast.LENGTH_SHORT).show()
         }
     }
 }
